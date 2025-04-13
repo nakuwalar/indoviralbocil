@@ -42,11 +42,11 @@ export async function generateMetadata(
             title,
             description,
             images: `${file.player_img}`,
-            url: `/v/${file.file_code}`,
+            url: `/v/${file.file_code}#${file.file_title}`,
             type: `article`,
         },
         alternates: {
-            canonical: `/v/${file.file_code}`,
+            canonical: `/v/${file.file_code}#${file.file_title}`,
         },
     };
 }
@@ -70,7 +70,7 @@ export default async function Video({ params }: PageProps) {
         headline: `${file.file_title}`,
         image: file.splash_img,
         description: `${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`,
-        url: `https://indoviralbocil.pages.dev/v/${file.file_code}`,
+        url: `https://indoviralbocil.pages.dev/v/${file.file_code}#${file.file_title}`,
         datePublished: new Date(
             file.file_created + ".000Z"
         ).toISOString(),
@@ -90,7 +90,7 @@ export default async function Video({ params }: PageProps) {
         headline: `${file.file_title}`,
         image: file.player_img,
         description: `${file.title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`,
-        url: `https://indoviralbocil.pages.dev/v/${file.file_code}`,
+        url: `https://indoviralbocil.pages.dev/v/${file.file_code}#${file.file_title}`,
         datePublished: new Date(
             file.file_created + ".000Z"
         ).toISOString(),
@@ -107,7 +107,7 @@ export default async function Video({ params }: PageProps) {
                 userInteractionCount: `${file.file_views}`,
             interactionType: {
                 '@type': `ReadAction`,
-                target: `https://indoviralbocil.pages.dev/v/${file.file_code}`
+                target: `https://indoviralbocil.pages.dev/v/${file.file_code}#${file.file_title}`
             }  
         }
         }
@@ -119,7 +119,7 @@ export default async function Video({ params }: PageProps) {
 <meta itemProp="description" content={`${file.file_title} di ${SITENAME} Video Bokep Indo Viral Terbaru Xpanas Bocil Ngentot Jilbab Smp Mama Sma`} />
 <meta itemProp="duration" content="P0DT0H18M43S" />
 <meta itemProp="thumbnailUrl" content={`${file.player_img}`} />
-<meta itemProp="embedURL" content={`https://filemoon.to/e/${file.file_code}`} />
+<meta itemProp="embedURL" content={`https://filemoon.to/e/${file.file_code}#${file.file_title}`} />
 <meta itemProp="uploadDate" content={`${new Date(
             file.file_created
         ).toISOString()}`} />
@@ -137,7 +137,7 @@ export default async function Video({ params }: PageProps) {
         </section>
                         <iframe
                 className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
-                src={`https://filemoon.to/e/${file.file_code}`}
+                src={`https://filemoon.to/e/${file.file_code}#${file.file_title}`}
                 scrolling="no"
                 title={file.title}
                 frameBorder={0}
