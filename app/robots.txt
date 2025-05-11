@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-sitemap: https://indoviralbocil.pages.dev/sitemap.xml
+Sitemap: https://indoviralbocil.pages.dev/sitemap.xml
